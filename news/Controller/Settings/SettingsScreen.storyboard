@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VWg-De-3BH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="Adf-tQ-Ik0">
+            <objects>
+                <viewController id="VWg-De-3BH" customClass="SettingsViewController" customModule="news" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xga-ZW-ayE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baw-2v-FeH">
+                                <rect key="frame" x="10" y="54" width="394" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JS8-E8-h4f">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iD0-UN-t6h">
+                                        <rect key="frame" x="345" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchValueChanged:" destination="VWg-De-3BH" eventType="valueChanged" id="8Wq-na-n0i"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TrP-Tm-45k"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="baw-2v-FeH" firstAttribute="top" secondItem="TrP-Tm-45k" secondAttribute="top" constant="10" id="QjG-vz-UfT"/>
+                            <constraint firstItem="TrP-Tm-45k" firstAttribute="trailing" secondItem="baw-2v-FeH" secondAttribute="trailing" constant="10" id="e97-Vk-pkQ"/>
+                            <constraint firstItem="baw-2v-FeH" firstAttribute="leading" secondItem="TrP-Tm-45k" secondAttribute="leading" constant="10" id="jZK-l4-YMj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="notificationSwitch" destination="iD0-UN-t6h" id="5hx-bz-yU9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LL0-JC-e8H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-259" y="61"/>
+        </scene>
+    </scenes>
+</document>
